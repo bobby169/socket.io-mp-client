@@ -1,12 +1,23 @@
 {
   "compilerOptions": {
-    "outDir": "build/cjs/",
-    "target": "es2018", // Node.js 10 (https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping)
-    "module": "commonjs",
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ES2018", "DOM"],
     "declaration": true,
-    "esModuleInterop": true
+    "outDir": "dist",
+    "rootDir": "lib",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
-    "./lib/**/*"
+    "lib/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }

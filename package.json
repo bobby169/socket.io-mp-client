@@ -50,6 +50,11 @@
     "engine.io-client": "~6.6.1",
     "socket.io-parser": "~4.2.4"
   },
+  "devDependencies": {
+    "rimraf": "^6.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
   "scripts": {
     "compile": "rimraf ./build && tsc && tsc -p tsconfig.esm.json && ./postcompile.sh",
     "test": "npm run format:check && npm run compile && if test \"$BROWSERS\" = \"1\" ; then npm run test:browser; else npm run test:node; fi",
